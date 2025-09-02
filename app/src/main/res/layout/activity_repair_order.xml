@@ -8,11 +8,11 @@
     tools:context=".RepairOrderActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/repairOrder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="116dp"
-        android:text="Repair Order"
+        android:text="@string/repair_order"
         android:textAlignment="center"
         android:textSize="34sp"
         android:textStyle="bold"
@@ -21,152 +21,203 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="TextView"
+        android:text="@string/textview"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/repairOrder"
         app:layout_constraintVertical_bias="0.0" />
 
-    <EditText
-        android:id="@+id/editTextText"
+    <TextView
+        android:id="@+id/inspection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="76dp"
+        android:text="@string/inspection"
+        app:layout_constraintEnd_toStartOf="@+id/editInspection"
+        app:layout_constraintTop_toBottomOf="@+id/technician" />
+
+    <TextView
+        android:id="@+id/technician"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="@string/technician"
+        app:layout_constraintStart_toStartOf="@+id/paint"
+        app:layout_constraintTop_toBottomOf="@+id/orderType" />
+
+    <TextView
+        android:id="@+id/orderType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/order_type"
+        app:layout_constraintStart_toStartOf="@+id/labor"
+        app:layout_constraintTop_toTopOf="@+id/editOrderType" />
+
+    <TextView
+        android:id="@+id/paint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="108dp"
+        android:text="@string/paint"
+        app:layout_constraintEnd_toStartOf="@+id/editPaint"
+        app:layout_constraintTop_toBottomOf="@+id/inspection" />
+
+    <TextView
+        android:id="@+id/parts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="108dp"
+        android:text="@string/parts"
+        app:layout_constraintEnd_toStartOf="@+id/editParts"
+        app:layout_constraintTop_toBottomOf="@+id/paint" />
+
+    <TextView
+        android:id="@+id/labor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="108dp"
+        android:text="@string/labor"
+        app:layout_constraintEnd_toStartOf="@+id/editLabor"
+        app:layout_constraintTop_toBottomOf="@+id/parts" />
+
+    <TextView
+        android:id="@+id/subtotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/subtotal"
+        app:layout_constraintStart_toStartOf="@+id/total"
+        app:layout_constraintTop_toBottomOf="@+id/editLabor" />
+
+    <TextView
+        android:id="@+id/tax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="184dp"
+        android:text="@string/tax"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtotal" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="176dp"
+        android:text="@string/total"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tax" />
+
+    <EditText
+        android:id="@+id/editTechnician"
+        android:layout_width="162dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="28dp"
         android:ems="10"
         android:inputType="text"
-        android:textSize="14sp"
-        tools:layout_editor_absoluteX="208dp"
-        tools:layout_editor_absoluteY="229dp" />
+        app:layout_constraintStart_toEndOf="@+id/technician"
+        app:layout_constraintTop_toBottomOf="@+id/editOrderType" />
 
-    <TextView
-        android:id="@+id/textView6"
+    <EditText
+        android:id="@+id/editOrderType"
+        android:layout_width="162dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintStart_toEndOf="@+id/orderType"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/editInspection"
+        android:layout_width="162dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="44dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTechnician" />
+
+    <EditText
+        android:id="@+id/editPaint"
+        android:layout_width="162dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/editInspection"
+        app:layout_constraintTop_toBottomOf="@+id/editInspection" />
+
+    <EditText
+        android:id="@+id/editParts"
+        android:layout_width="162dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/editTechnician"
+        app:layout_constraintTop_toBottomOf="@+id/editPaint" />
+
+    <EditText
+        android:id="@+id/editLabor"
+        android:layout_width="162dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/editInspection"
+        app:layout_constraintTop_toBottomOf="@+id/editParts" />
+
+    <Button
+        android:id="@+id/submitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="72dp"
-        android:text="Order Type"
-        app:layout_constraintEnd_toStartOf="@+id/editTextText"
-        tools:layout_editor_absoluteY="239dp" />
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="64dp"
+        android:text="submit"
+        app:layout_constraintEnd_toStartOf="@+id/tax"
+        app:layout_constraintTop_toBottomOf="@+id/labor" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Technician"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="307dp" />
+        android:layout_marginStart="60dp"
+        android:text="@string/_0_0"
+        app:layout_constraintStart_toEndOf="@+id/subtotal"
+        app:layout_constraintTop_toTopOf="@+id/subtotal" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Inspection"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="367dp" />
+        android:layout_marginStart="88dp"
+        android:text="@string/_0_0"
+        app:layout_constraintStart_toEndOf="@+id/tax"
+        app:layout_constraintTop_toTopOf="@+id/tax" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Paint"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="425dp" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Parts"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="486dp" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Labor"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="550dp" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Subtotal"
-        tools:layout_editor_absoluteX="208dp"
-        tools:layout_editor_absoluteY="610dp" />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tax"
-        tools:layout_editor_absoluteX="208dp"
-        tools:layout_editor_absoluteY="644dp" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Total"
-        tools:layout_editor_absoluteX="208dp"
-        tools:layout_editor_absoluteY="683dp" />
-
-    <EditText
-        android:id="@+id/editTextText2"
-        android:layout_width="162dp"
-        android:layout_height="40dp"
-        android:ems="10"
-        android:inputType="text"
-        tools:layout_editor_absoluteX="208dp"
-        tools:layout_editor_absoluteY="293dp" />
-
-    <EditText
-        android:id="@+id/editTextText3"
-        android:layout_width="162dp"
-        android:layout_height="40dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        tools:layout_editor_absoluteX="208dp"
-        tools:layout_editor_absoluteY="357dp" />
-
-    <EditText
-        android:id="@+id/editTextText4"
-        android:layout_width="162dp"
-        android:layout_height="40dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        tools:layout_editor_absoluteX="208dp"
-        tools:layout_editor_absoluteY="418dp" />
-
-    <EditText
-        android:id="@+id/editTextText5"
-        android:layout_width="162dp"
-        android:layout_height="40dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        tools:layout_editor_absoluteX="208dp"
-        tools:layout_editor_absoluteY="477dp" />
-
-    <EditText
-        android:id="@+id/editTextText6"
-        android:layout_width="162dp"
-        android:layout_height="40dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        tools:layout_editor_absoluteX="208dp"
-        tools:layout_editor_absoluteY="540dp" />
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="311dp"
-        tools:layout_editor_absoluteY="606dp" />
+        android:layout_marginStart="76dp"
+        android:text="@string/_0_0"
+        app:layout_constraintStart_toEndOf="@+id/total"
+        app:layout_constraintTop_toTopOf="@+id/total" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
