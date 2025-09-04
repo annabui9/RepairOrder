@@ -3,6 +3,7 @@ package com.example.repairorder;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,13 +29,13 @@ public class RepairOrderActivity extends AppCompatActivity { // parent class for
             return insets;
         });
 
-//        EditText orderTypeET = findViewById(R.id.editOrderType);
-//        Random gen = new Random();
-//        double number = gen.nextDouble();
-//        String n = "$" + number;
-//        //orderTypeET.setText(R.string.);
-//        String value = orderTypeET.getText().toString();
-//        Log.i("TEST", value);
+        TextView subtotalPrice= findViewById(R.id.subtotalValue);
+        Random gen = new Random();
+        double number = gen.nextDouble();
+        String n = "$" + number;
+        subtotalPrice.setText(n); //UI
+        String value = subtotalPrice.getText().toString(); //What's in the UI into the code
+        Log.i("TEST", value);
 
     }
 }
