@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="orderTypes">
+        <item>Car Repair</item>
+        <item>Truck Repair</item>
+        <item>Tire Repair</item>
+
+</string-array>
+
+</resources>

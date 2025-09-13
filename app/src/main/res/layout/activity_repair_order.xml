@@ -11,7 +11,7 @@
         android:id="@+id/repairOrder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="96dp"
         android:text="@string/repair_order"
         android:textAlignment="center"
         android:textSize="34sp"
@@ -38,7 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="76dp"
+        android:layout_marginEnd="96dp"
         android:text="@string/inspection"
         app:layout_constraintEnd_toStartOf="@+id/editInspection"
         app:layout_constraintTop_toBottomOf="@+id/technician" />
@@ -56,27 +56,28 @@
         android:id="@+id/orderType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="200dp"
         android:text="@string/order_type"
         app:layout_constraintStart_toStartOf="@+id/labor"
-        app:layout_constraintTop_toTopOf="@+id/editOrderType" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/paint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
-        android:layout_marginEnd="108dp"
+        android:layout_marginEnd="120dp"
         android:text="@string/paint"
         app:layout_constraintEnd_toStartOf="@+id/editPaint"
         app:layout_constraintTop_toBottomOf="@+id/inspection" />
+
 
     <TextView
         android:id="@+id/parts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
-        android:layout_marginEnd="108dp"
+        android:layout_marginEnd="120dp"
         android:text="@string/parts"
         app:layout_constraintEnd_toStartOf="@+id/editParts"
         app:layout_constraintTop_toBottomOf="@+id/paint" />
@@ -85,8 +86,8 @@
         android:id="@+id/labor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="108dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="120dp"
         android:text="@string/labor"
         app:layout_constraintEnd_toStartOf="@+id/editLabor"
         app:layout_constraintTop_toBottomOf="@+id/parts" />
@@ -95,7 +96,8 @@
         android:id="@+id/subtotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
         android:text="@string/subtotal"
         app:layout_constraintStart_toStartOf="@+id/total"
         app:layout_constraintTop_toBottomOf="@+id/editLabor" />
@@ -104,8 +106,8 @@
         android:id="@+id/tax"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="184dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="164dp"
         android:text="@string/tax"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/subtotal" />
@@ -114,8 +116,8 @@
         android:id="@+id/total"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="176dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="156dp"
         android:text="@string/total"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tax" />
@@ -124,29 +126,18 @@
         android:id="@+id/editTechnician"
         android:layout_width="162dp"
         android:layout_height="40dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="248dp"
         android:ems="10"
         android:inputType="text"
         app:layout_constraintStart_toEndOf="@+id/technician"
-        app:layout_constraintTop_toBottomOf="@+id/editOrderType" />
-
-    <EditText
-        android:id="@+id/editOrderType"
-        android:layout_width="162dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintStart_toEndOf="@+id/orderType"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editInspection"
         android:layout_width="162dp"
         android:layout_height="40dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="44dp"
         android:ems="10"
         android:inputType="numberDecimal"
@@ -167,7 +158,7 @@
         android:id="@+id/editParts"
         android:layout_width="162dp"
         android:layout_height="40dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="28dp"
         android:ems="10"
         android:inputType="numberDecimal"
         app:layout_constraintStart_toStartOf="@+id/editTechnician"
@@ -177,7 +168,8 @@
         android:id="@+id/editLabor"
         android:layout_width="162dp"
         android:layout_height="40dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="numberDecimal"
         app:layout_constraintStart_toStartOf="@+id/editInspection"
@@ -187,8 +179,8 @@
         android:id="@+id/submitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="76dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="92dp"
         android:text="submit"
         app:layout_constraintEnd_toStartOf="@+id/tax"
         app:layout_constraintTop_toBottomOf="@+id/labor" />
@@ -219,5 +211,13 @@
         android:text="@string/_0_0"
         app:layout_constraintStart_toEndOf="@+id/total"
         app:layout_constraintTop_toTopOf="@+id/total" />
+
+    <Spinner
+        android:id="@+id/spinner_orderType"
+        android:layout_width="207dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="64dp"
+        app:layout_constraintStart_toEndOf="@+id/orderType"
+        app:layout_constraintTop_toTopOf="@+id/orderType" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
